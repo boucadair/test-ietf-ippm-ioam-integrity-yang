@@ -1,0 +1,30 @@
+   {
+     "ietf-ioam:ioam": {
+       "admin-config": {
+         "enabled": true
+       },
+       "profiles": {
+         "profile": [
+           {
+             "profile-name": "ietf-test-profile",
+             "filter": {
+               "filter-type": "ietf-ioam:acl-filter",
+               "ace-name": "test-acl"
+             },
+             "protocol-type": "ietf-ioam:nsh",
+             "ietf-ioam-integrity:int-preallocated-tracing-profile": {
+               "node-action": "ietf-ioam:action-encapsulate",
+               "trace-types": {
+                 "use-namespace": "ietf-ioam:default-namespace",
+                 "trace-type": [
+                   "ietf-ioam:trace-namespace-data"
+                 ]
+               },
+               "max-length": 512,
+               "int-method": "method-0"
+             }
+           }
+         ]
+       }
+     }
+   }
