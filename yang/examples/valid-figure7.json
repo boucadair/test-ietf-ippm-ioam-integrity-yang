@@ -1,0 +1,26 @@
+   {
+     "ietf-ioam:ioam": {
+       "admin-config": {
+         "enabled": true
+       },
+       "profiles": {
+         "profile": [
+           {
+             "profile-name": "ietf-test-profile",
+             "protocol-type": "ietf-ioam:ipv6",
+             "ietf-ioam-integrity:int-incremental-tracing-profile": {
+               "node-action": "ietf-ioam:action-encapsulate",
+               "trace-types": {
+                 "use-namespace": "ietf-ioam:default-namespace",
+                 "trace-type": [
+                   "ietf-ioam:trace-transit-delay"
+                 ]
+               },
+               "max-length": 512,
+               "int-method": "method-0"
+             }
+           }
+         ]
+       }
+     }
+   }

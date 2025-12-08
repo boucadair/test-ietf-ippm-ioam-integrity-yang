@@ -1,0 +1,20 @@
+   {
+     "ietf-ioam:ioam": {
+       "admin-config": {
+         "enabled": true
+       },
+       "profiles": {
+         "profile": [
+           {
+             "profile-name": "ietf-test-profile",
+             "protocol-type": "ietf-ioam:ipv6",
+             "ietf-ioam-integrity:int-pot-profile": {
+               "pot-type": "ietf-ioam:pot-type-0",
+               "node-action": "ietf-ioam:action-encapsulate",
+               "int-method": "method-0"
+             }
+           }
+         ]
+       }
+     }
+   }
