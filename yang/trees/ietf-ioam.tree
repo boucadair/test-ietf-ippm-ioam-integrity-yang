@@ -1,0 +1,79 @@
+module: ietf-ioam
+  +--rw ioam
+     +--ro info
+     |  +--ro timestamp-type?        identityref
+     |  +--ro available-interface* [if-name]
+     |     +--ro if-name    if:interface-ref
+     +--rw admin-config
+     |  +--rw enabled?   boolean
+     +--rw profiles
+        +--rw profile* [profile-name]
+           +--rw profile-name                    string
+           +--rw filter
+           |  +--rw filter-type?   ioam-filter-type
+           |  +--rw ace-name?      -> /acl:acls/acl/aces/ace/name
+           +--rw protocol-type?                  ioam-protocol-type
+           +--rw incremental-tracing-profile! {incremental-trace}?
+           |  +--rw node-action?   ioam-node-action
+           |  +--rw trace-types
+           |  |  +--rw use-namespace?   ioam-namespace
+           |  |  +--rw trace-type*      ioam-trace-type
+           |  +--rw max-length?    uint32
+           +--rw preallocated-tracing-profile! {preallocated-trace}?
+           |  +--rw node-action?   ioam-node-action
+           |  +--rw trace-types
+           |  |  +--rw use-namespace?   ioam-namespace
+           |  |  +--rw trace-type*      ioam-trace-type
+           |  +--rw max-length?    uint32
+           +--rw direct-export-profile! {direct-export}?
+           |  +--rw node-action?              ioam-node-action
+           |  +--rw trace-types
+           |  |  +--rw use-namespace?   ioam-namespace
+           |  |  +--rw trace-type*      ioam-trace-type
+           |  +--rw max-length?               uint32
+           |  +--rw flow-id?                  uint32
+           |  +--rw enable-sequence-number?   boolean
+           +--rw pot-profile! {proof-of-transit}?
+           |  +--rw use-namespace?   ioam-namespace
+           |  +--rw pot-type?        ioam-pot-type
+           +--rw e2e-profile! {edge-to-edge}?
+              +--rw node-action?   ioam-node-action
+              +--rw e2e-types
+                 +--rw use-namespace?   ioam-namespace
+                 +--rw e2e-type*        ioam-e2e-type
+
+  grouping ioam-filter:
+    +-- filter-type?   ioam-filter-type
+    +-- ace-name?      -> /acl:acls/acl/aces/ace/name
+  grouping encap-tracing:
+    +-- trace-types
+    |  +-- use-namespace?   ioam-namespace
+    |  +-- trace-type*      ioam-trace-type
+    +-- max-length?    uint32
+  grouping ioam-incremental-tracing-profile:
+    +-- node-action?   ioam-node-action
+    +-- trace-types
+    |  +-- use-namespace?   ioam-namespace
+    |  +-- trace-type*      ioam-trace-type
+    +-- max-length?    uint32
+  grouping ioam-preallocated-tracing-profile:
+    +-- node-action?   ioam-node-action
+    +-- trace-types
+    |  +-- use-namespace?   ioam-namespace
+    |  +-- trace-type*      ioam-trace-type
+    +-- max-length?    uint32
+  grouping ioam-direct-export-profile:
+    +-- node-action?              ioam-node-action
+    +-- trace-types
+    |  +-- use-namespace?   ioam-namespace
+    |  +-- trace-type*      ioam-trace-type
+    +-- max-length?               uint32
+    +-- flow-id?                  uint32
+    +-- enable-sequence-number?   boolean
+  grouping ioam-e2e-profile:
+    +-- node-action?   ioam-node-action
+    +-- e2e-types
+       +-- use-namespace?   ioam-namespace
+       +-- e2e-type*        ioam-e2e-type
+  grouping ioam-admin-config:
+    +-- enabled?   boolean
