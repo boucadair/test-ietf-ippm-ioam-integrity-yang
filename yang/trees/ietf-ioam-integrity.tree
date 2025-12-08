@@ -1,0 +1,31 @@
+module: ietf-ioam-integrity
+
+  augment /ioam:ioam/ioam:profiles/ioam:profile:
+    +--rw int-incremental-tracing-profile! {int-incremental-trace}?
+    |  +--rw node-action?   ioam-node-action
+    |  +--rw trace-types
+    |  |  +--rw use-namespace?   ioam-namespace
+    |  |  +--rw trace-type*      ioam-trace-type
+    |  +--rw max-length?    uint32
+    |  +--rw int-method?    iana-ioam-ipm:method-id
+    +--rw int-preallocated-tracing-profile! {int-preallocated-trace}?
+    |  +--rw node-action?   ioam-node-action
+    |  +--rw trace-types
+    |  |  +--rw use-namespace?   ioam-namespace
+    |  |  +--rw trace-type*      ioam-trace-type
+    |  +--rw max-length?    uint32
+    |  +--rw int-method?    iana-ioam-ipm:method-id
+    +--rw int-pot-profile! {int-proof-of-transit}?
+    |  +--rw use-namespace?   ioam:ioam-namespace
+    |  +--rw pot-type?        ioam:ioam-pot-type
+    |  +--rw node-action?     ioam:ioam-node-action
+    |  +--rw int-method?      iana-ioam-ipm:method-id
+    +--rw int-e2e-profile! {int-edge-to-edge}?
+       +--rw node-action?   ioam-node-action
+       +--rw e2e-types
+       |  +--rw use-namespace?   ioam-namespace
+       |  +--rw e2e-type*        ioam-e2e-type
+       +--rw int-method?    iana-ioam-ipm:method-id
+
+  grouping int-method-grouping:
+    +-- int-method?   iana-ioam-ipm:method-id
