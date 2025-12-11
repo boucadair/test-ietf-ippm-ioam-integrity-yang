@@ -1,0 +1,111 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2025-12-11T00:56:08.901150+00:00",
+  "repo": "boucadair/test-ietf-ippm-ioam-integrity-yang",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOQk7mh863uekn",
+      "title": "add modules",
+      "url": "https://github.com/boucadair/test-ietf-ippm-ioam-integrity-yang/pull/1",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-12-08T17:03:19Z",
+      "updatedAt": "2025-12-08T17:07:45Z",
+      "baseRepository": "boucadair/test-ietf-ippm-ioam-integrity-yang",
+      "baseRefName": "main",
+      "baseRefOid": "12580f3aa8ef40802b43204cba5ee93279004342",
+      "headRepository": "boucadair/test-ietf-ippm-ioam-integrity-yang",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "23b7fe5518109fa10d5e16f8f98649974481f20a",
+      "closedAt": "2025-12-08T17:07:45Z",
+      "mergedAt": "2025-12-08T17:07:45Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "c0268d157c15c5dca52cd57851ee78678eff3bcc"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOQk7mh863ujek",
+      "title": "Create valid-figure7.json",
+      "url": "https://github.com/boucadair/test-ietf-ippm-ioam-integrity-yang/pull/2",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-12-08T17:09:59Z",
+      "updatedAt": "2025-12-08T17:12:24Z",
+      "baseRepository": "boucadair/test-ietf-ippm-ioam-integrity-yang",
+      "baseRefName": "main",
+      "baseRefOid": "c0268d157c15c5dca52cd57851ee78678eff3bcc",
+      "headRepository": "boucadair/test-ietf-ippm-ioam-integrity-yang",
+      "headRefName": "boucadair-patch-2",
+      "headRefOid": "05e4c89a6a0260ea495364d1bec663ab8e64a0e9",
+      "closedAt": "2025-12-08T17:12:24Z",
+      "mergedAt": "2025-12-08T17:12:24Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "f7a6b34499b79a7d4ef2ca8ace7d7e5301895477"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
